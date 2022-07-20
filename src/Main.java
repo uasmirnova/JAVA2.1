@@ -1,11 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-
-        int cost = 3000; //стоимость билета
-        int rublePerMile = 20; // 1 миля за 20 рублей
-        int bonus = cost / rublePerMile;
-
-        System.out.println(bonus + " бонусных(ые) миль(ли)");
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println(miles);
     }
 }
+
+
